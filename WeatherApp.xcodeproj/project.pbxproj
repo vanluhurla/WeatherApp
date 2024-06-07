@@ -11,7 +11,6 @@
 		030200752BE25EB0004A10C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030200742BE25EB0004A10C8 /* ContentView.swift */; };
 		030200772BE25EB2004A10C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030200762BE25EB2004A10C8 /* Assets.xcassets */; };
 		0302007A2BE25EB2004A10C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030200792BE25EB2004A10C8 /* Preview Assets.xcassets */; };
-		039B42AB2BFB9812000B879B /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B42AA2BFB9812000B879B /* WeatherButton.swift */; };
 		039B42AE2BFB9A1D000B879B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B42AD2BFB9A1D000B879B /* LocationManager.swift */; };
 		039B42B12BFE35BA000B879B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B42B02BFE35BA000B879B /* WelcomeView.swift */; };
 		039B42B32BFE38B4000B879B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B42B22BFE38B4000B879B /* LoadingView.swift */; };
@@ -21,6 +20,9 @@
 		039B42BD2BFF5050000B879B /* weatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 039B42BC2BFF5050000B879B /* weatherData.json */; };
 		039B42C02BFF5562000B879B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B42BF2BFF5562000B879B /* Extensions.swift */; };
 		039B42C22C08D4CD000B879B /* forecastData.json in Resources */ = {isa = PBXBuildFile; fileRef = 039B42C12C08D4CD000B879B /* forecastData.json */; };
+		03DCA5F32C10A70100F1E934 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 03DCA5F22C10A70100F1E934 /* Lottie */; };
+		03DCA5F52C10A87100F1E934 /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DCA5F42C10A87100F1E934 /* LoadingAnimationView.swift */; };
+		03DCA5F72C10A9F000F1E934 /* weatherAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 03DCA5F62C10A9EF00F1E934 /* weatherAnimation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,6 @@
 		030200742BE25EB0004A10C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		030200762BE25EB2004A10C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030200792BE25EB2004A10C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		039B42AA2BFB9812000B879B /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
 		039B42AD2BFB9A1D000B879B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		039B42B02BFE35BA000B879B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		039B42B22BFE38B4000B879B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -39,6 +40,8 @@
 		039B42BC2BFF5050000B879B /* weatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.json; sourceTree = "<group>"; };
 		039B42BF2BFF5562000B879B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		039B42C12C08D4CD000B879B /* forecastData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = forecastData.json; sourceTree = "<group>"; };
+		03DCA5F42C10A87100F1E934 /* LoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
+		03DCA5F62C10A9EF00F1E934 /* weatherAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weatherAnimation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DCA5F32C10A70100F1E934 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,7 @@
 			children = (
 				030200792BE25EB2004A10C8 /* Preview Assets.xcassets */,
 				039B42BA2BFF5012000B879B /* ModelData.swift */,
+				03DCA5F62C10A9EF00F1E934 /* weatherAnimation.json */,
 				039B42C12C08D4CD000B879B /* forecastData.json */,
 				039B42BC2BFF5050000B879B /* weatherData.json */,
 			);
@@ -104,8 +109,8 @@
 		039B42AF2BFE2FA8000B879B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03DCA5F42C10A87100F1E934 /* LoadingAnimationView.swift */,
 				030200742BE25EB0004A10C8 /* ContentView.swift */,
-				039B42AA2BFB9812000B879B /* WeatherButton.swift */,
 				039B42B02BFE35BA000B879B /* WelcomeView.swift */,
 				039B42B22BFE38B4000B879B /* LoadingView.swift */,
 				039B42B82BFF4F67000B879B /* WeatherView.swift */,
@@ -137,6 +142,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				03DCA5F22C10A70100F1E934 /* Lottie */,
+			);
 			productName = WeatherApp;
 			productReference = 0302006F2BE25EB0004A10C8 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +173,9 @@
 				Base,
 			);
 			mainGroup = 030200662BE25EB0004A10C8;
+			packageReferences = (
+				03DCA5F12C10A70100F1E934 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 030200702BE25EB0004A10C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,6 +194,7 @@
 				039B42BD2BFF5050000B879B /* weatherData.json in Resources */,
 				039B42C22C08D4CD000B879B /* forecastData.json in Resources */,
 				030200772BE25EB2004A10C8 /* Assets.xcassets in Resources */,
+				03DCA5F72C10A9F000F1E934 /* weatherAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,13 +206,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				039B42B12BFE35BA000B879B /* WelcomeView.swift in Sources */,
+				03DCA5F52C10A87100F1E934 /* LoadingAnimationView.swift in Sources */,
 				039B42AE2BFB9A1D000B879B /* LocationManager.swift in Sources */,
 				039B42BB2BFF5012000B879B /* ModelData.swift in Sources */,
 				030200752BE25EB0004A10C8 /* ContentView.swift in Sources */,
 				039B42B72BFE3EE4000B879B /* WeatherManager.swift in Sources */,
 				039B42C02BFF5562000B879B /* Extensions.swift in Sources */,
 				030200732BE25EB0004A10C8 /* WeatherAppApp.swift in Sources */,
-				039B42AB2BFB9812000B879B /* WeatherButton.swift in Sources */,
 				039B42B32BFE38B4000B879B /* LoadingView.swift in Sources */,
 				039B42B92BFF4F67000B879B /* WeatherView.swift in Sources */,
 			);
@@ -408,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03DCA5F12C10A70100F1E934 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03DCA5F22C10A70100F1E934 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03DCA5F12C10A70100F1E934 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 030200672BE25EB0004A10C8 /* Project object */;
 }

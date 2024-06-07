@@ -21,7 +21,7 @@ struct WeatherView: View {
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                 
-                MainWeatherStatusView(imageName: getWeatherIcon(for: weather.weather.first?.main ?? "Clear"),
+                MainWeatherStatusView(imageName: getWeatherIcon(for: weather.weather.first?.description ?? "cloud.fill"),
                                       temperature: weather.main.feelsLike.roundDouble() + "°")
                 
                 Spacer()
@@ -31,7 +31,7 @@ struct WeatherView: View {
                         let date = Date(timeIntervalSince1970: TimeInterval(dayForecast.dt))
                         WeatherDayView(date: date,
                                        imageName: getWeatherIcon(for: dayForecast.weather.first?.main ?? "Clear"),
-                                       temperature: Int(dayForecast.main.temp.rounded()))
+                                       temperature: Int(dayForecast.main.tempMax.rounded()))
                     }
                 }
                 Spacer()
@@ -119,24 +119,47 @@ struct MainWeatherStatusView: View {
     }
 }
 
-func getWeatherIcon(for weatherCondition: String) -> String {
-    switch weatherCondition {
-    case "Clear":
+func getWeatherIcon(for description: String) -> String {
+    switch description {
+    case "clear sky":
         return "sun.max.fill"
-    case "Clouds":
+    case "few clouds", "scattered clouds":
+        return "cloud.sun.fill"
+    case "broken clouds", "overcast clouds":
         return "cloud.fill"
-    case "Rain":
-        return "cloud.rain.fill"
-    case "Drizzle":
+    case "shower rain", "light rain", "moderate rain":
         return "cloud.drizzle.fill"
-    case "Thunderstorm":
+    case "rain":
+        return "cloud.rain.fill"
+    case "thunderstorm":
         return "cloud.bolt.fill"
-    case "Snow":
+    case "snow":
         return "snow"
+    case "mist", "fog":
+        return "cloud.fog.fill"
     default:
-        return "cloud.fill"
+        return "sun.max.fill" // Default icon if description is not recognized
     }
 }
+
+//func getWeatherIcon(for weatherCondition: String) -> String {
+//    switch weatherCondition {
+//    case "Clear":
+//        return "sun.max.fill"
+//    case "Clouds":
+//        return "cloud.fill"
+//    case "Rain":
+//        return "cloud.rain.fill"
+//    case "Drizzle":
+//        return "cloud.drizzle.fill"
+//    case "Thunderstorm":
+//        return "cloud.bolt.fill"
+//    case "Snow":
+//        return "snow"
+//    default:
+//        return "cloud.fill"
+//    }
+//}
 
 
 //WeatherDayView(dayOfWeek: "TUE",

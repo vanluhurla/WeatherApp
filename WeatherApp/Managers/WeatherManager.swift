@@ -47,8 +47,7 @@ class WeatherManager {
     
     // Group forecast data by day starting from the next day
     func groupForecastByDay(forecasts: [ForecastResponse.Forecast]) -> [ForecastResponse.Forecast] {
-        var groupedForecasts: [ForecastResponse.Forecast] = []
-        var addedDates: Set<String> = Set()
+        var groupedForecasts: [String: ForecastResponse.Forecast] = [:]
         let currentDate = Date()
         let calendar = Calendar.current
         
@@ -60,13 +59,22 @@ class WeatherManager {
             
             let dayString = dateFormattedForDay(date)
             
-            if !addedDates.contains(dayString) {
-                groupedForecasts.append(forecast)
-                addedDates.insert(dayString)
+            if var existingForecast = groupedForecasts[dayString] {
+                if forecast.main.tempMax > existingForecast.main.tempMax {
+                    existingForecast = forecast
+                }
+                groupedForecasts[dayString] = existingForecast
+            } else {
+                groupedForecasts[dayString] = forecast
             }
         }
         
-        return groupedForecasts
+        // Sort the grouped forecasts by date
+        let sortedGroupedForecasts = groupedForecasts.values.sorted {
+            $0.dt < $1.dt
+        }
+        
+        return sortedGroupedForecasts
     }
     
     private func dateFormattedForDay(_ date: Date) -> String {
@@ -81,8 +89,7 @@ struct ResponseBody: Decodable {
     var coord: CoordinatesResponse
     var weather: [WeatherResponse]
     var main: MainResponse
-    var name: String                // city name
-//    var wind: WindResponse
+    var name: String // city name
     
     struct CoordinatesResponse: Decodable {
         var lon: Double
@@ -92,8 +99,8 @@ struct ResponseBody: Decodable {
     struct WeatherResponse: Decodable {
         var id: Double
         var main: String
-//        var description: String
-//        var icon: String
+        var description: String
+        var icon: String
     }
     
     struct MainResponse: Decodable {
@@ -101,14 +108,7 @@ struct ResponseBody: Decodable {
         var feels_like: Double
         var temp_min: Double
         var temp_max: Double
-//        var pressure: Double
-//        var humidity: Double
     }
-    
-//    struct WindResponse: Decodable {
-//        var speed: Double
-//        var deg: Double
-//    }
 }
 
 extension ResponseBody.MainResponse {
