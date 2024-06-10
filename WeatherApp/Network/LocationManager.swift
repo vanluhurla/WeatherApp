@@ -5,6 +5,8 @@
 //  Created by Vanessa Hurla on 20/05/2024.
 //
 
+// THis class manages location requests and updates the observable properties location and isLoading accordingly. When a location request is made, it sets isLoading to true. Upon receiving a location update or encountering an error, it updates the location and isLoading properties and notifies any observers of these changes.
+
 import Foundation
 import CoreLocation
 

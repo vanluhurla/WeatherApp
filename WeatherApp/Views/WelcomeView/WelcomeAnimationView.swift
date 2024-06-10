@@ -5,10 +5,12 @@
 //  Created by Vanessa Hurla on 05/06/2024.
 //
 
+// This struct defines a SwiftUI view called LoadingAnimationView that displays a Lottie animation.
+
 import SwiftUI
 import Lottie
 
-struct LoadingAnimationView: UIViewRepresentable {
+struct WelcomeAnimationView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: .zero)
@@ -33,5 +35,5 @@ struct LoadingAnimationView: UIViewRepresentable {
 }
 
 #Preview {
-    LoadingAnimationView()
+    WelcomeAnimationView()
 }

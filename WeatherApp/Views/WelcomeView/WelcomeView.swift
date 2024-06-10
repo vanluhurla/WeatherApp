@@ -5,6 +5,8 @@
 //  Created by Vanessa Hurla on 22/05/2024.
 //
 
+// The WelcomeView struct defines a user interface for welcoming users to the Weather App. It includes an animation, some introductory text, and a button for sharing the user's current location. 
+
 import SwiftUI
 import CoreLocationUI
 
@@ -13,10 +15,10 @@ struct WelcomeView: View {
     
     var body: some View {
         VStack {
-            Spacer() // Spacer to push content down from top
+            Spacer()
             
             VStack(spacing: 50) {
-                LoadingAnimationView()
+                WelcomeAnimationView()
                     .frame(height: 250)
                 
                 Text("Welcome to the Weather App")
@@ -35,10 +37,10 @@ struct WelcomeView: View {
             .multilineTextAlignment(.center)
             .padding()
             
-            Spacer() // Spacer to push content up from bottom
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white) // Optional: Add a background color if needed
+        .background(Color.white)
     }
 }
 

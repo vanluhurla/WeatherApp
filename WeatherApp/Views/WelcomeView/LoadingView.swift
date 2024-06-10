@@ -5,6 +5,8 @@
 //  Created by Vanessa Hurla on 22/05/2024.
 //
 
+// The LoadingView struct defines a user interface component for displaying a loading indicator.
+
 import SwiftUI
 
 struct LoadingView: View {
