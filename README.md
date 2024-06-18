@@ -1,7 +1,7 @@
 
 
 <p align="center" width="100%">
-    <img src="https://photos.app.goo.gl/ta8Dj4rddLN8snMj9">
+    <img src="https://i.postimg.cc/gJ2sj0Hd/4.png">
 </p>
 <br>
 
