@@ -19,7 +19,7 @@ The idea to create the Weather App emerged during a study process of SwiftUI and
 
 ## Installation
 
-You can download the latest installable version of GoodChef for iOS:
+You can download the latest installable version of Weather App for iOS:
 
 ```bash
  - Click on the <>Code button above; 
